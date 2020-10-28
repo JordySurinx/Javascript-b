@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" value="Jordy Surinx">
+	<title>JavaScript</title>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Ovo&display=swap');
+body {
+	background-color:#000000;
+	margin:0;
+	padding:0;
+}
+* {
+	margin:15px;
+	padding:5px;
+	font-family: 'Mulish', sans-serif;
+	font-weight:600;
+	font-size:22px;
+	color:#D96704;
+	}
+	</style>
+		<script type="text/javascript">
+		let voornaam = "Jordy";
+		let achternaam ="Surinx";
+		let fullname = voornaam + " " + achternaam;
+		let calcname = voornaam.length + achternaam.length;
+		let filename = "javaScriptFrameWork."
+		let capsmall = filename.toLowerCase();
+		let fname1 = capsmall.substring(0,10);
+		let fname2 = capsmall.substring(10,19);
+		let vijfdekarakter = filename.charAt(5);
+		let email = "jan.klaassen@mail.com";
+		let posiat = email.indexOf("@");
+		let ccmail = posiat
+		let mailname = email.substring(0, email.lastIndexOf("@"));
+		let langetekst = "'Deze tekst is te lang en zal worden afgekapt op 8 tekens m.b.v. substr()' wordt dan:";
+		let substr = langetekst.substr(0,9);
+
+		document.write(`<p>Hallo, ${fullname}</p><p>De volledige lengte van je naam en voornaam is: ${calcname}</p><p>De originele filename is: ${filename}</p><p>De filename kan beter in kleine letters getypt worden, dus: ${capsmall}</p><p>Als je '${capsmall}' opsplitst, krijg je : '${fname1}' en '${fname2}'. </p><p>Het zesde karakter (volgens mensen)  in '${filename}' is: '${vijfdekarakter}'.</p><p>In '${email}' staat de @ op positie: ${posiat}</p>
+			<p>De naam is dus: '${mailname}'</p><p>De originele tekst: ${langetekst}  '${substr}'</p>`);
+
+		// Heb even een klein beetje css toegepast was minder irritant voor mijn ogen //
+
+</script>
+</head>
+<body>
+
+	</body>
+	</html>
+</html>
+
