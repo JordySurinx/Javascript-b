@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Array maken 1</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Ovo&display=swap');
+* {
+
+	color:#FFF;
+	background-color:#000;
+	font-family: 'Mulish', sans-serif;
+	font-size:22px;
+}
+	</style>
+
+</head>
+<script>
+	let maanden = ["Januari","Februari","Maart"];
+	maanden[3] = "April";
+	maanden[4] = "Mei";
+	maanden[5] = "Juni";
+	maanden.push("Juli");
+	maanden.push("Augustus","September","Oktober","November","December");
+    let zoek1 = maanden.indexOf("March");
+	document.write(`<p>${maanden}</p><p>Aantal maanden:${maanden.length}</p>`);
+	document.write(`<p>${zoek1}</p>`);
+
+	// Oefening 2 , Opdracht Arrays //
+
+	let namen = ["Erik","Sofie","Adam","Zorro"];
+	namen.sort();
+	let zoeken = prompt("Typ een naam die je wilt zoeken");
+	let positie = namen.indexOf(zoeken);
+	document.write(`De gesorteerde namen zijn: ${namen}`);
+	document.write (`<p>${positie}</p>`);
+// Oefening 3, Opdracht Arrays //
+let naam = prompt("Wat is je volledige naam?");
+let naamtoarray = naam.split(" ");
+naamtoarray = naamtoarray.reverse();
+naamtoarray = naamtoarray.join(" ");
+document.write(naamtoarray);
+</script>
+<body>
+	
+</body>
+</html>
