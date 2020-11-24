@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+	</style>
+</head>
+<body>
+	<script>
+let fout = false;
+let voornaam = prompt("Wat is je voornaam?");
+
+function controle(controle1) {
+	if (controle1 == null) {
+		fout = true;
+		return `U heeft geannuleerd.`
+	}
+	else if (controle1 == 0) {
+		fout = true;
+		return `U heeft niets ingevoerd`
+	}
+	else if (controle1.length < 2) {
+		fout = true;
+		return `U moet minstens meer als 2 tekens aanduiden`
+	}
+	else {
+		return controle1.charAt(0).toUpperCase() + 
+		controle1.substring(1);
+	}
+
+}
+
+
+
+
+let antwoord1 = controle(voornaam);
+
+
+document.write(`${antwoord1}`);
+if (fout == false) {
+	let achternaam = prompt("Wat is je achternaam?");
+	let antwoord2 = controle(achternaam);
+	document.write(` ${antwoord2}`);
+}
+
+
+
+</script>
+</body>
+</html>

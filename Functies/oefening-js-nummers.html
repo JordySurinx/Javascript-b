@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+let vraag1 = prompt("Geef mij een getal");
+let vraag2 = prompt("Geef mij nog een getal");
+function controle(getal1,getal2) {
+	
+	if ( getal1 > getal2) {
+		return "Je eerste getal is groter dan je tweede getal."
+}
+else if (getal1 == getal2) {
+	return "Beidde getallen zijn gelijk" 
+}
+else if (getal1 < getal2) {
+	return "Je eerste getal is kleiner dan je tweede getal"
+}
+
+}
+let antwoord = controle(vraag1,vraag2);
+document.write(antwoord);
+	</script>
+	
+</body>
+</html>
