@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#container{
+			width: 300px;
+		}
+		#rood{
+			width: 75px;
+			height: 100px;
+			background-color: red;
+			float: left;
+			cursor: pointer;
+		}
+		#geel{
+			width: 75px;
+			height: 100px;
+			background-color: yellow;
+			cursor: pointer;
+			float: left;
+		}
+		#zwart{
+			width: 75px;
+			height: 100px;
+			background-color: black;
+			float: left;
+			cursor: pointer;
+			margin-left: 35px;
+		}
+
+		#onder{
+			width: 300px;
+			height: 300px;
+			background-color: lightgrey;
+			clear: both;
+		}
+
+	</style>
+	<title></title>
+	<script type="text/javascript">
+		window.addEventListener("DOMContentLoaded", function () {
+			document.getElementById("zwart")
+.addEventListener("mouseover",kleur1);
+document.getElementById("geel")
+.addEventListener("mouseover",kleur2);
+document.getElementById("rood").addEventListener("mouseover",kleur3);
+		});
+
+
+		// Functies
+
+		function kleur1() {
+			onder.style.backgroundColor = "black";
+		}
+		function kleur2() {
+			onder.style.backgroundColor = "yellow"
+		}
+		function kleur3() {
+			onder.style.backgroundColor = "red"
+		}
+
+
+	</script>
+</head>
+<body>
+	<div id="container">
+		<p>Hover over een kleur om deze toe te passen op het grote vlak.</p>
+		<div id="boven">
+			<div id="zwart"></div>
+			<div id="geel"></div>
+			<div id="rood"></div>
+		</div>
+		<div id="onder"></div>
+	</div>
+	
+</body>
+</html>
