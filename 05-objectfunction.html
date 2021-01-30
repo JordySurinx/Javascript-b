@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+    let garfDeKat = {
+        leeftijd: 8,
+        kleur: 'grijs',
+        meow() {
+            console.log('meowww');
+        },
+        eet(eten) {
+            console.log(`yum,ik hou van ${eten}`);
+        },
+        slapen(aantalMinuten) {
+            for (let i = 0; i < aantalMinuten; i++) {
+                console.log(`Ik slaap al ${i}  minuten`);
+            }
+            console.log('Wakker.... meowww!');
+        }
+    };
+
+
+    garfDeKat.meow();
+    garfDeKat.eet("Kattenbrokjes");
+    garfDeKat.slapen(10);
+    </script>
+</body>
+
+</html>
