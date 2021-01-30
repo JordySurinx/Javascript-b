@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Boek(titel,jaar,publisher) {
+			this.titel = titel;
+			this.jaar = jaar;
+			this.publisher = publisher;
+			this.writeBoek = function () {
+    		document.write(`<p> Titel:${this.titel}</p><p> Jaar:${this.jaar}</p><p>Publisher: ${this.publisher}</p>`);
+    };
+		}
+		let mijnEersteJavaScriptBoek = new Boek("JavaScript, The right way",2012,"jstherightway.com");
+		mijnEersteJavaScriptBoek.writeBoek();
+	</script>
+</body>
+</html>

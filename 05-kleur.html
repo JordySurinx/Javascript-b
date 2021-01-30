@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.addEventListener("DOMContentLoaded", function () {
+document.getElementById("myBtn").addEventListener("click", berekenRGB);
+});
+
+		for(let getal=1; getal < 20; getal++){
+console.log(`${getal} hexadeciaal is in decimaal: ${parseInt(getal,16)}`);
+}
+console.log(`a hexadecimal is in decimaal: ${parseInt("a", 16)}`);
+
+function KleurRGB(hex) {
+this.hex = hex;
+   if (this.hex.charAt(0) == "#") {
+   		this.hex = this.hex.substring(1, 7);
+   }
+   this.Rwaarde = parseInt(this.hex.substring(0, 2), 16);
+   this.Gwaarde = parseInt(this.hex.substring(2, 4), 16);
+   this.Bwaarde = parseInt(this.hex.substring(4, 6), 16);
+   this.toon = function (toon1, toon2, toon3, bgc) {
+	toon1.value = this.Rwaarde;
+   toon2.value = this.Gwaarde;
+   toon3.value = this.Bwaarde;
+   bgc.style.background = `#${this.hex}`;
+}
+}
+function berekenRGB() {
+let hexWaarde = document.getElementById("hexWaardeIn").value;
+   let myColorRGB = new KleurRGB(hexWaarde);
+   myColorRGB.toon(document.getElementById("kleurROut"), document.getElementById("kleurGOut"), document.getElementById("kleurBOut"), document.body);
+}
+
+//einde constructor functie
+
+
+		</script>
+</head>
+
+<body>
+    <form id="myForm">
+        <label>HEX: <input type="text" id="hexWaardeIn"> </label>
+        <input type="button" id="myBtn" value="Bereken de RGB waarde." />
+        R: <input type="text" id="kleurROut" maxlength="3" size="3" />
+        G: <input type="text" id="kleurGOut" maxlength="3" size="3" />
+        B: <input type="text" id="kleurBOut" maxlength="3" size="3" />
+    </form>
+</body>
+
+</html>
